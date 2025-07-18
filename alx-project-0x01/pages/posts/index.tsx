@@ -8,7 +8,8 @@ import { PostProps }
 const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
-
+const [post, setPost] = useState<PostData | null>(null);
+  
   const handleAddPost = (newPost: PostData) => {
     // You can implement logic here if you want to update the posts list
     // For now, this function does nothing since 'post' state is removed
